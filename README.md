@@ -1,27 +1,25 @@
-# SocialMediaAuth
+<h1 align="center">Social Media Authentication</h1>
+<br>
+<br>
+<br>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+<!-- ## Demo  
+try a demo <a href="https://geolocation.muriloportugal.com.br" target="_blank">here</a>. -->
+<br>
 
-## Development server
+## Introduction - Eng
+This projects is a demo to show how to use social media authenticators in your apps with Angular.  
+The user's photo will be get from social media API and apear at screen inside a Christmas bubbles.  
+The position of each photo will changed randomly every time the page is refreshed, but no images will be overlapped and they will be fit at window width.
+<br>
+<br>
+## Introdução - Pt-Br
+Esse projeto é uma demonstração de como utilizar autenticação de redes sociais para logar em seus aplicativos utilizando o Angular.  
+A foto do usuário será obtida da API da rede social e aparecerá dentro da bola de Natal.
+A posição das fotos é aleatória cada vez que a página é atualizada, mas nenhuma foto irá ficar sobreposta e elas se ajustaram a largura da página.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<img src="https://github.com/muriloportugal/social-media-auth/blob/main/src/assets/data/imgExample.jpg">
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## :robot: Tecnologias:
+- Angular
+- Facebook API

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BolTypes } from 'src/app/components/bola/bola.component';
+import { BallTypes } from 'src/app/components/bola/bola.component';
 
 interface Position{
   x:number;
@@ -10,7 +10,7 @@ interface User{
   name: string;
   photo: string;
   position:Position;
-  boltype: BolTypes;
+  boltype: BallTypes;
 }
 
 @Component({
@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
         name: i.toString(),
         photo: this.choosePhoto(),
         position: this.newPostion(usrs),
-        boltype: this.chooseBolType(),
+        boltype: this.chooseBallType(),
       });
 
     }
@@ -105,20 +105,20 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  chooseBolType(){
+  chooseBallType(){
     //Altera a cor de cada bola randomicamente, apesar de termos somente 4 tipos de bolas, deixamos ir até 8 para que tenha mais vermelhas que as demais
     const type = Number(Number(Math.random()*8).toFixed());
     switch (type) {
       case 0:
-        return BolTypes.red;
+        return BallTypes.red;
       case 1:
-        return BolTypes.green;
+        return BallTypes.green;
       case 2:
-        return BolTypes.yellow;
+        return BallTypes.yellow;
       case 3:
-        return BolTypes.grey;
+        return BallTypes.grey;
       default:
-        return BolTypes.red;
+        return BallTypes.red;
     }
   }
 
