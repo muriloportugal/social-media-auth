@@ -18,7 +18,7 @@ Esse projeto é uma demonstração de como utilizar autenticação de redes soci
 A foto do usuário será obtida da API da rede social e aparecerá dentro da bola de Natal.
 A posição das fotos é aleatória cada vez que a página é atualizada, mas nenhuma foto irá ficar sobreposta e elas se ajustaram a largura da página.
 
-<img src="https://github.com/muriloportugal/social-media-auth/blob/main/src/assets/data/imgExample.jpg">
+<img src="https://github.com/muriloportugal/social-media-auth/blob/main/src/assets/data/imgExample.jpeg">
 
 ## :robot: Tecnologias:
 - Angular
