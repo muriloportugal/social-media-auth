@@ -3,11 +3,20 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "ng serve",
-      "type": "pwa-chrome",
+      "name": "ng serve Linux",
+      "type": "firefox",
       "request": "launch",
       "preLaunchTask": "npm: start",
       "url": "http://localhost:4200/"
+    },
+    {
+      "name": "ng serve Windows",
+      "type": "firefox",
+      "firefoxExecutable": "C:\\Program Files\\Firefox Developer Edition\\firefox.exe",
+      "request": "launch",
+      "preLaunchTask": "npm: start",
+      "url": "http://localhost:4200/",
+      "timeout": 10,
     },
     {
       "name": "ng test",

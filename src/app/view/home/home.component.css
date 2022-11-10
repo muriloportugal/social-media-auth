@@ -1,0 +1,14 @@
+.container-bolas{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .container-bolas {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+

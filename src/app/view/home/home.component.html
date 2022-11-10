@@ -1,0 +1,14 @@
+<div class="container-bolas">
+  <ng-container *ngFor="let user of users">
+    <app-bola
+      [positionX]="user.position.x"
+      [positionY]="user.position.y"
+      [typeBol]="user.boltype"
+      [Width]="sizeWpx"
+      [Height]="sizeHpx"
+      [userPhoto]="user.photo"
+    >
+      {{user.name}}
+    </app-bola>
+  </ng-container>
+</div>
