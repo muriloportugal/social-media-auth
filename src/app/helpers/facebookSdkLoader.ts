@@ -1,10 +1,12 @@
+import { environment } from "src/environments/environment";
+
 export function facebookSdkLoader() {
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '{your-app-id}',
+      appId      : environment.fbApiId,
       cookie     : true,
       xfbml      : true,
-      version    : '{api-version}'
+      version    : 'v15.0'
     });
 
     FB.AppEvents.logPageView();
