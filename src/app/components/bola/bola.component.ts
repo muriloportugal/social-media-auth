@@ -31,6 +31,9 @@ export class BolaComponent implements OnInit {
   @Input() set userPhoto(pic:string){
     this._userPhoto = pic;
   }
+  @Input() set userName(name:string){
+    this._userName = name;
+  }
 
   private _positionX: number = 0;
   private _positionY: number = 0;
@@ -38,6 +41,7 @@ export class BolaComponent implements OnInit {
   private _width: number = 0;
   private _height: number = 0;
   private _userPhoto = '';
+  private _userName = '';
 
   constructor() { }
 
@@ -52,7 +56,7 @@ export class BolaComponent implements OnInit {
     return this._positionY;
   }
 
-  get typeBol(): BallTypes {
+  get typeBall(): BallTypes {
     return this._sourceBall;
   }
 
@@ -66,6 +70,10 @@ export class BolaComponent implements OnInit {
 
   get userPhoto():string{
     return this._userPhoto;
+  }
+
+  get userName():string{
+    return this._userName;
   }
 
 }

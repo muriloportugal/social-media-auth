@@ -1,0 +1,30 @@
+<div class="login-container">
+  <h1>Logue com sua conta do facebook para acessar</h1>
+
+  <div class="login-info">
+
+    <!-- <div>
+      <img class="bg-img" src="assets/data/socialMedia732x670.png" alt="Imagem Media Social">
+    </div> -->
+    <div class="login-text">
+      <span>
+        Nenhum dado seu será armazenado em nossos servidores, será utilizado somente
+        seu nome e sua foto para demonstração do processo de login.
+      </span>
+      <span>
+        Após logar você será encaminhado a tela <a [routerLink]="[ '/home' ]">home</a> onde
+        verá sua foto personalizada em um ambiente natalino.
+      </span>
+      <div class="login-button">
+        <!-- Botão de login do facebook, não temos eventos amarrado a ele diretamente
+        mas temos um subscribe (FB.Event.subscribe) esperando o evento de login definido
+        no arquivo facebookSdkLoader -->
+        <div class="btt-fb-lgin" (click)="login()">
+          <img class="img-fb" src="https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/U7MAWJlE6hZ.png" alt="" width="24" height="24">
+          <span>Continue com Facebook</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

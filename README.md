@@ -3,8 +3,8 @@
 <br>
 <br>
 
-<!-- ## Demo  
-try a demo <a href="https://geolocation.muriloportugal.com.br" target="_blank">here</a>. -->
+## Demo  
+try a demo <a href="https://socialmediaauth.muriloportugal.com.br" target="_blank">here</a>.
 <br>
 
 ## Introduction - Eng
@@ -18,7 +18,7 @@ Esse projeto é uma demonstração de como utilizar autenticação de redes soci
 A foto do usuário será obtida da API da rede social e aparecerá dentro da bola de Natal.
 A posição das fotos é aleatória cada vez que a página é atualizada, mas nenhuma foto irá ficar sobreposta e elas se ajustaram a largura da página.
 
-<img src="https://github.com/muriloportugal/social-media-auth/blob/main/src/assets/data/imgExample.jpeg">
+<img src="https://github.com/muriloportugal/social-media-auth/blob/main/src/assets/SocialMediaAuth.jpg">
 
 ## :robot: Tecnologias:
 - Angular

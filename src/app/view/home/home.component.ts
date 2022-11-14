@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { BallTypes } from 'src/app/components/bola/bola.component';
+import { AuthService } from 'src/app/services/auth.service';
 
 interface Position{
   x:number;
@@ -10,7 +11,8 @@ interface User{
   name: string;
   photo: string;
   position:Position;
-  boltype: BallTypes;
+  balltype: BallTypes;
+  index:number;
 }
 
 @Component({
@@ -19,14 +21,17 @@ interface User{
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   private _users: User[] = [];
   positions: Position[] = [];
   //tamanho das bolas em pixel
   sizeWpx = 100;
   sizeHpx = 110;
 
-  constructor() {
+  constructor(
+    private authService:AuthService,
+    private changeDetectRef: ChangeDetectorRef
+  ) {
+    document.body.className = 'bgNatal';
 
   }
 
@@ -36,14 +41,29 @@ export class HomeComponent implements OnInit {
     let usrs: User[] = [];
     for (let i = 0; i < 20; i++) {
       usrs.push({
-        name: i.toString(),
+        name: `User ${i}`,
         photo: this.choosePhoto(),
         position: this.newPostion(usrs),
-        boltype: this.chooseBallType(),
+        balltype: this.chooseBallType(),
+        index: i,
       });
 
     }
     this.users = usrs;
+    this.authService.userData$.subscribe(userData=>{
+      if(userData){
+        const userTemp = this.users;
+        userTemp.push({
+          name: userData.name,
+          photo: userData.picture.data.url,
+          balltype: this.chooseBallType(),
+          position: this.newPostion(this.users),
+          index: this.users.length+1,
+        });
+        this._users = userTemp;
+        this.changeDetectRef.detectChanges();
+      }
+    })
   }
 
   get users( ): User[] {
@@ -136,5 +156,9 @@ export class HomeComponent implements OnInit {
       default:
         return 'assets/data/user1.png';
     }
+  }
+
+  identifyChangeUser(index:number,user:User){
+    return user ? user.index : undefined;
   }
 }

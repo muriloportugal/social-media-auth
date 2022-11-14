@@ -44,4 +44,6 @@ Thumbs.db
 
 # Angular PROD Environments
 environment.prod.ts
-environment.ts
+
+#Pasta com os certificados
+cert/*

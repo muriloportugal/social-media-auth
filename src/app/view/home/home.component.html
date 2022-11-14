@@ -1,14 +1,14 @@
 <div class="container-bolas">
-  <ng-container *ngFor="let user of users">
+  <div *ngFor="let user of users; trackBy:identifyChangeUser">
     <app-bola
       [positionX]="user.position.x"
       [positionY]="user.position.y"
-      [typeBol]="user.boltype"
+      [typeBall]="user.balltype"
       [Width]="sizeWpx"
       [Height]="sizeHpx"
       [userPhoto]="user.photo"
     >
       {{user.name}}
     </app-bola>
-  </ng-container>
+  </div>
 </div>

@@ -7,7 +7,7 @@
       "type": "firefox",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/"
+      "url": "https://localhost:4200/"
     },
     {
       "name": "ng serve Windows",
@@ -15,7 +15,7 @@
       "firefoxExecutable": "C:\\Program Files\\Firefox Developer Edition\\firefox.exe",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/",
+      "url": "https://localhost:4200/",
       "timeout": 10,
     },
     {
@@ -23,7 +23,7 @@
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: test",
-      "url": "http://localhost:9876/debug.html"
+      "url": "https://localhost:9876/debug.html"
     }
   ]
 }
