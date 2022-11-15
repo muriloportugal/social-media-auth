@@ -5,14 +5,8 @@ html body {
   background-color: #edeeff;
 }
 
-/* body {
-  background-image: url('assets/data/bgnatal.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
 .bgNatal{
-  background-image: url('assets/data/bgnatal.png');
+  background-image: url('assets/data/bgnatalSmall.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
