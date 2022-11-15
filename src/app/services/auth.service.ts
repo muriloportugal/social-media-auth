@@ -86,4 +86,15 @@ export class AuthService {
       // document.location.href='\home';
     });
   }
+
+  logoutFacebook(){
+    FB.getLoginStatus(response =>{
+      if(response.authResponse && response.status === 'connected'){
+        FB.logout((logoutResponse)=>{
+          this.userData$.next(null)
+          this.ngZone.run(()=>this.router.navigate(['/login']));
+        });
+      }
+    });
+  }
 }

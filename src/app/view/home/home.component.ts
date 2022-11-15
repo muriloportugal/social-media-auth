@@ -161,4 +161,8 @@ export class HomeComponent implements OnInit {
   identifyChangeUser(index:number,user:User){
     return user ? user.index : undefined;
   }
+
+  logout(){
+    this.authService.logoutFacebook();
+  }
 }
